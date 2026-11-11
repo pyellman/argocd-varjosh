@@ -6,10 +6,13 @@ metadata:
 spec:
   description: Project for App1 frontend and backend workloads
   sourceRepos:
-    - https://github.com/CloudWithVarJosh/app1-frontend-config.git
-    - https://github.com/CloudWithVarJosh/app1-backend-config.git
+    # - https://github.com/CloudWithVarJosh/app1-frontend-config.git
+    # - https://github.com/CloudWithVarJosh/app1-backend-config.git
+    - https://github.com/pyellman/argocd-varjosh-05-projects-app1-backend-config.git
+    - https://github.com/pyellman/argocd-varjosh-05-projects-app1-frontend-config.git
   destinations:
-    - namespace: app1-*
+    # - namespace: app1-*
+    - namespace: app1*
       server: https://kubernetes.default.svc
   clusterResourceWhitelist:
     - group: ""
@@ -23,6 +26,7 @@ spec:
       kind: ConfigMap
     - group: ""
       kind: Secret
+  # clusterResourceBlackList is redundant here, the Whitelist above created an implicit deny
   clusterResourceBlacklist:
     - group: rbac.authorization.k8s.io
       kind: ClusterRole

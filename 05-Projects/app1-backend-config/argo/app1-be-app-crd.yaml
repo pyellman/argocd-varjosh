@@ -11,7 +11,7 @@ spec:
     path: backend
   destination:
     server: https://kubernetes.default.svc
-    namespace: app1-ns
+    namespace: app1
   syncPolicy:
     automated:
       prune: true
