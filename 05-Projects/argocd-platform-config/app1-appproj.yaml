@@ -20,6 +20,11 @@ spec:
   namespaceResourceWhitelist:
     - group: apps
       kind: Deployment
+    # add Replicaset and Pod else they don't show in ui! - PY
+    - group: "apps"
+      kind: "ReplicaSet"
+    - group: ""
+      kind: "Pod"
     - group: ""
       kind: Service
     - group: ""
