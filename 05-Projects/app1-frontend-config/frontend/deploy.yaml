@@ -17,7 +17,7 @@ spec:
       containers:
         - name: frontend
           # image: cloudwithvarjosh/app1-frontend:v1.0.0
-          image: pyellman/argo-varjosh-app1-backend
+          image: pyellman/argo-varjosh-app1-frontend:lastest
           ports:
             - containerPort: 4000
           env:
