@@ -2,7 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
-  namespace: app1-ns
+  # namespace: app1-ns
+  namespace: app1
 spec:
   replicas: 1
   selector:
@@ -15,7 +16,8 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: cloudwithvarjosh/app1-frontend:v1.0.0
+          # image: cloudwithvarjosh/app1-frontend:v1.0.0
+          image: pyellman/argo-varjosh-app1-backend
           ports:
             - containerPort: 4000
           env:

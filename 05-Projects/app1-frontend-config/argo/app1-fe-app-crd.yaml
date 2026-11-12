@@ -6,12 +6,14 @@ metadata:
 spec:
   project: app1-project
   source:
-    repoURL: https://github.com/CloudWithVarJosh/app1-frontend-config.git
+    # repoURL: https://github.com/CloudWithVarJosh/app1-frontend-config.git
+    repoURL: https://github.com/pyellman/argocd-varjosh-05-projects-app1-frontend-config.git
     targetRevision: HEAD
     path: frontend
   destination:
     server: https://kubernetes.default.svc
-    namespace: app1-ns
+    # namespace: app1-ns
+    namespace: app1
   syncPolicy:
     automated:
       prune: true

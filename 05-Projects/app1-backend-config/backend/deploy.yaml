@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: cloudwithvarjosh/app1-backend:v1.0.0
+          # image: cloudwithvarjosh/app1-backend:v1.0.0
+          image: pyellman/argo-varjosh-app1-backend
           ports:
             - containerPort: 5000
