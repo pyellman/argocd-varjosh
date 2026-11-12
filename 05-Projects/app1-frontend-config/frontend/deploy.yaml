@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
-  # technically ns shouldn't be needed as it's specified in application
+  # technically ns isn't needed as it's specified in application
   # manifest destination, as varun repeatedly points out
   # namespace: app1-ns
   namespace: app1

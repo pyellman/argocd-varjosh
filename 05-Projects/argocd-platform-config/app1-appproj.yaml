@@ -20,7 +20,9 @@ spec:
   namespaceResourceWhitelist:
     - group: apps
       kind: Deployment
-    # add Replicaset and Pod else they don't show in ui! - PY
+    # add Replicaset and Pod else they don't show in argo ui, but NOT having
+    # them here does NOT prevent deployment from spinning them up because
+    # deployment is a higher level controller for Replicaset and Pod - PY
     - group: "apps"
       kind: "ReplicaSet"
     - group: ""
@@ -31,7 +33,7 @@ spec:
       kind: ConfigMap
     - group: ""
       kind: Secret
-  # clusterResourceBlackList is redundant here, the Whitelist above created an implicit deny
+  # clusterResourceBlackList is redundant here? varun says the Whitelist above created an implicit deny
   clusterResourceBlacklist:
     - group: rbac.authorization.k8s.io
       kind: ClusterRole
